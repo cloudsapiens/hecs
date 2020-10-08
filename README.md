@@ -1,4 +1,4 @@
-[![hecs logo](https://github.com/cloudsapiens/hecs/blob/main/imgs/rsz_hecs.png)](https://github.com/cloudsapiens/hecs) 
+[![hecs logo](https://github.com/cloudsapiens/hecs/blob/main/imgs/rsz_hecs.png)](https://github.com/cloudsapiens/hecs/blob/main/imgs/rsz_hecs.png) 
 
 ```sh
 SAP HANA, express edition on Amazon Elastic Container Service
@@ -13,7 +13,7 @@ AWS services used for this solution:
 
 Source of the SAP HANA, Express Edition (private repository):  [Docker Hub](https://hub.docker.com/_/sap-hana-express-edition)
 # Architecture
-[![hecs architecture](https://github.com/cloudsapiens/hecs/blob/main/imgs/architecture.png)](https://github.com/cloudsapiens/hecs) 
+[![hecs architecture](https://github.com/cloudsapiens/hecs/blob/main/imgs/architecture.png)](https://github.com/cloudsapiens/hecs/blob/main/imgs/architecture.png) 
 
 # About SAP HANA, express edition
 ```SAP HANA, express edition``` is a streamlined version of the SAP HANA platform which enables developers to jumpstart application development in the cloud or personal computer to build and deploy modern applications that use up to 32GB memory. SAP HANA, express edition includes the in-memory data engine with advanced analytical data processing engines for business, text, spatial, and graph data - supporting multiple data models on a single copy of the data. 
@@ -75,7 +75,7 @@ docker images
 ```
 You’ll see the following one: 
 
-[![hecs architecture](https://github.com/cloudsapiens/hecs/blob/main/imgs/docker.PNG)](https://github.com/cloudsapiens/hecs)
+[![hecs architecture](https://github.com/cloudsapiens/hecs/blob/main/imgs/docker.PNG)](https://github.com/cloudsapiens/hecs/blob/main/imgs/docker.PNG)
 
 ### Step 4: Push to Amazon Elastic Container Repository (ECR)
 Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI: 
@@ -92,7 +92,7 @@ Run the following command to push this image to your newly created AWS repositor
 docker push <YOURAWSACCOUNTID>.dkr.ecr.<YOURAWSREGION>.amazonaws.com/<YOURREPOSITORYNAME>:latest
 ```
 At the end, you will see the Docker image in your repository:
-[![hecs ecr](https://github.com/cloudsapiens/hecs/blob/main/imgs/ecr2.PNG)](https://github.com/cloudsapiens/hecs)
+[![hecs ecr](https://github.com/cloudsapiens/hecs/blob/main/imgs/ecr2.PNG)](https://github.com/cloudsapiens/hecs/blob/main/imgs/ecr2.PNG)
 
 ### Step 5: Create EFS for your Docker container (volume)
 Please follow this [AWS official guide](https://docs.aws.amazon.com/efs/latest/ug/gs-step-two-create-efs-resources.html ) to create an EFS file system.
@@ -106,7 +106,7 @@ Go to Elastic Container Service and open Task Defintion
   - Choose ecsTaskExecutionRole as Task Execution Role or let the process creates it automatically
 
 Scroll down to Volumes and add Volume as shown on the screen shot:
-[![hecs efs](https://github.com/cloudsapiens/hecs/blob/main/imgs/efs.PNG)](https://github.com/cloudsapiens/hecs)
+[![hecs efs](https://github.com/cloudsapiens/hecs/blob/main/imgs/efs.PNG)](https://github.com/cloudsapiens/hecs/blob/main/imgs/efs.PNG)
 
 Scroll up to Container Definitions and Add Container:
   - Enter a name for your container
@@ -116,7 +116,7 @@ Scroll up to Container Definitions and Add Container:
 Enter port mappings (all TCP): ```39017:39017```, ```39041-39045:39041-39045```, ```1128-1129:1128-1129```, ```59013-59014:59013-59014```
 
 Scroll up to Storage and Logging and define the Volume and CloudWatch settings as shown in the following screenshot:
-[![hecs volume](https://github.com/cloudsapiens/hecs/blob/main/imgs/ecs-volumes-logging.PNG)](https://github.com/cloudsapiens/hecs)
+[![hecs volume](https://github.com/cloudsapiens/hecs/blob/main/imgs/ecs-volumes-logging.PNG)](https://github.com/cloudsapiens/hecs/blob/main/imgs/ecs-volumes-logging.PNG)
 
 Select your predefined Volume and enter Container Path ```/hana/mounts```
 Enable logging with CloudWatch, setting the flag ```Auto-configure CloudWatch logs```

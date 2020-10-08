@@ -74,6 +74,7 @@ Execute command:
 docker images
 ```
 You’ll see the following one: 
+
 [![hecs architecture](https://github.com/cloudsapiens/hecs/blob/main/imgs/docker.PNG)](https://github.com/cloudsapiens/hecs)
 
 ### Step 4: Push to Amazon Elastic Container Repository (ECR)

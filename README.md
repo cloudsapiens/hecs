@@ -74,7 +74,7 @@ Execute command:
 docker images
 ```
 You’ll see the following one: 
-[![hecs architecture](https://github.com/cloudsapiens/hecs/blob/main/images/docker.png)](https://github.com/cloudsapiens/hecs)
+[![hecs architecture](https://github.com/cloudsapiens/hecs/blob/main/imgs/docker.PNG)](https://github.com/cloudsapiens/hecs)
 
 ### Step 4: Push to Amazon Elastic Container Repository (ECR)
 Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI: 
@@ -226,8 +226,10 @@ chmod 600 /efs/data/hana/password.json && chown 12000:79 /efs/data/hana/password
  - Click on Run task
 
 ### Step 12: Congratulations
+
 If everything goes well, in the CloudWatch logs you’ll see the the message: ```Startup finished```
 Now, you can connect to your SAP HANA database
+
 ---
 ### Step 13: (Optional) Create table with HdbSQL command inside the container
  - Connect to your ECS Cluster via SSH (see IP under tab ECS Instances) with:

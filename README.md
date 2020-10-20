@@ -211,7 +211,7 @@ Note: This file serves as the master password for your SAP HANA, express edition
 
 Execute the following commands:
 ```sh 
-chown 12000:79 /data/hana
+chown 12000:79 /efs/data/hana
 chmod 600 /efs/data/hana/password.json && chown 12000:79 /efs/data/hana/password.json
 ```
 ### Step 11: Run new Task 
